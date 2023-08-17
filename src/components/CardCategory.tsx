@@ -7,6 +7,8 @@ import {
 } from 'react-native';
 import {ICategories} from '../Types/products';
 import React from 'react';
+import {shadow} from '../theme/shadow';
+import {Colors} from '../theme/colors';
 
 const width = Dimensions.get('screen').width;
 
@@ -38,22 +40,23 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
   logoContainer: {
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
     width: 70,
     height: 70,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,
+    ...shadow.s2,
   },
   logo: {
     fontWeight: '700',
     fontSize: 32,
     textAlign: 'center',
-    color: '#282626',
+    color: Colors.black,
     textTransform: 'uppercase',
   },
   title: {
-    color: 'black',
+    color: Colors.black,
     fontSize: 14,
     textAlign: 'center',
     marginTop: 12,

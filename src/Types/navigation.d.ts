@@ -3,7 +3,7 @@ import type {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
 
 export type CategoriesParamsList = {
   CategoriesList: undefined;
-  ProductsList: undefined;
+  ProductsList: {title: string};
   Map: undefined;
 };
 
