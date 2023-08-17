@@ -7,7 +7,7 @@ const ProductsStack = createNativeStackNavigator();
 
 const ProductsStackScreen = () => {
   return (
-    <ProductsStack.Navigator screenOptions={{headerShown: false}}>
+    <ProductsStack.Navigator>
       <ProductsStack.Screen name="CategoriesList" component={Categories} />
       <ProductsStack.Screen name="ProductsList" component={ProductsList} />
       <ProductsStack.Screen name="Map" component={Map} />

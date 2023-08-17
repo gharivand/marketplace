@@ -17,7 +17,7 @@ const ApplicationNavigator = () => {
   return (
     <SafeAreaView style={simpleStyle.safeArea}>
       <NavigationContainer>
-        <Tab.Navigator>
+        <Tab.Navigator screenOptions={{headerShown: false}}>
           <Tab.Screen name="Categories" component={ProductsStackScreen} />
           <Tab.Screen name="Orders" component={OrdersStackScreen} />
         </Tab.Navigator>
