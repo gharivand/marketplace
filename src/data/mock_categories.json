@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "title": "Women's Fashion",
+      "image": ""
+    },
+    {
+      "id": 1,
+      "title": "Men's Fashion",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "title": "Computer",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "title": "Phones",
+      "image": ""
+    },
+    {
+      "id": 4,
+      "title": "Home, Pet & Appliances",
+      "image": ""
+    },
+    {
+      "id": 5,
+      "title": "Toys , Kids & Babies",
+      "image": ""
+    },
+    {
+      "id": 6,
+      "title": "Outdoor Fun & Sports",
+      "image": ""
+    },
+    {
+      "id": 6,
+      "title": "Beauty, Health & Hair",
+      "image": ""
+    }
+  ]
+}
