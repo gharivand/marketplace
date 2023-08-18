@@ -32,11 +32,11 @@ const style = StyleSheet.create({
   container: {
     backgroundColor: Colors.white,
     borderRadius: 12,
-    marginTop: 8,
     marginHorizontal: 8,
     flexDirection: 'row',
     alignItems: 'center',
     ...shadow.s2,
+    marginBottom: 8,
   },
   logoContainer: {
     backgroundColor: Colors.gray,
