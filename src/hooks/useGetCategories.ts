@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import {ICategories} from '../Types/products';
 
-const mockData = require('../data/mock_categories.json');
+const mockData = require('../data/mock/categories.json');
 
 export const UseGetCategories = () => {
   const [data, setData] = useState<ICategories[]>([]);
