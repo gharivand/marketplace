@@ -6,7 +6,7 @@ import {OrdersContext} from '../data/context/OrdersContext';
 import {ApplicationScreenProps} from '../Types/navigation';
 
 const Map: React.FC<ApplicationScreenProps> = ({navigation}) => {
-  const [location, setLocation] = useState({lat: '', lng: ''});
+  const [location] = useState({lat: '35.752516', lng: '51.398997'});
   const {addOrder} = useContext(OrdersContext);
 
   const submit_order = () => {
