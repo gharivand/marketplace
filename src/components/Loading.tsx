@@ -8,7 +8,9 @@ interface IProps {
 }
 
 const Loading: React.FC<IProps> = props => {
-  if (!props.isLoading) return null;
+  if (!props.isLoading) {
+    return null;
+  }
   return (
     <View style={style.container}>
       <ActivityIndicator color={Colors.black} size={'small'} />
