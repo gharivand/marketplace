@@ -1,11 +1,12 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
+import {Image, SafeAreaView, StyleSheet} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import {NavigationContainer} from '@react-navigation/native';
 import ProductsStackScreen from './Products';
 import OrdersStackScreen from './Orders';
 import {ApplicationStackParamList} from '../Types/navigation';
+import IconTabBar from '../components/IconTabBar';
 
 const Tab = createBottomTabNavigator<ApplicationStackParamList>();
 
@@ -18,8 +19,24 @@ const ApplicationNavigator = () => {
     <SafeAreaView style={simpleStyle.safeArea}>
       <NavigationContainer>
         <Tab.Navigator screenOptions={{headerShown: false}}>
-          <Tab.Screen name="Categories" component={ProductsStackScreen} />
-          <Tab.Screen name="Orders" component={OrdersStackScreen} />
+          <Tab.Screen
+            name="Categories"
+            component={ProductsStackScreen}
+            options={{
+              tabBarIcon: ({focused}) => (
+                <IconTabBar name={'Categories'} focused={focused} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Orders"
+            component={OrdersStackScreen}
+            options={{
+              tabBarIcon: ({focused}) => (
+                <IconTabBar name={'Orders'} focused={focused} />
+              ),
+            }}
+          />
         </Tab.Navigator>
       </NavigationContainer>
     </SafeAreaView>
