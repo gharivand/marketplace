@@ -1,5 +1,6 @@
 import React from 'react';
 import {FlatList, StyleSheet, View} from 'react-native';
+
 import {ApplicationScreenProps} from '../Types/navigation';
 import {UseGetCategories} from '../hooks/useGetCategories';
 import {CardCategory, Loading} from '../components';

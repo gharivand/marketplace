@@ -1,5 +1,6 @@
-import {StyleSheet, Text, View, ActivityIndicator} from 'react-native';
 import React from 'react';
+import {StyleSheet, Text, View, ActivityIndicator} from 'react-native';
+
 import {Colors} from '../theme/colors';
 
 interface IProps {

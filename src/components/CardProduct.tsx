@@ -1,6 +1,7 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {IProducts} from '../Types/products';
 import React from 'react';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+
+import {IProducts} from '../Types/products';
 import {Colors} from '../theme/colors';
 import {shadow} from '../theme/shadow';
 

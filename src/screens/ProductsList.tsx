@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import {FlatList, StyleSheet, Text, View} from 'react-native';
+
 import {ApplicationScreenProps} from '../Types/navigation';
 import {useGetProducts} from '../hooks/useGetProducts';
 import {CardProduct, Loading} from '../components';

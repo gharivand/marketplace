@@ -9,11 +9,11 @@ export interface IProducts {
   title: string;
 }
 
-export type TColor = 'pending' | 'in-process' | 'delivery' | 'delivered';
+export type TStatus = 'pending' | 'in-process' | 'delivery' | 'delivered';
 
 export interface IOrder {
   id: string;
   title: string;
   location: string;
-  status: TColor;
+  status: TStatus;
 }

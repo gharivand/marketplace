@@ -1,5 +1,6 @@
 import React, {useContext, useState} from 'react';
 import {Button, Image, StyleSheet, View} from 'react-native';
+
 import {Colors} from '../theme/colors';
 import {OrdersContext} from '../data/context/OrdersContext';
 import {ApplicationScreenProps} from '../Types/navigation';

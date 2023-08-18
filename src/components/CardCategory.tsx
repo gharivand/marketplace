@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   StyleSheet,
   Text,
@@ -5,8 +6,8 @@ import {
   View,
   Dimensions,
 } from 'react-native';
+
 import {ICategories} from '../Types/products';
-import React from 'react';
 import {shadow} from '../theme/shadow';
 import {Colors} from '../theme/colors';
 

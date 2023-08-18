@@ -1,21 +1,29 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useEffect, useRef, useState} from 'react';
+
 import {IOrder, IProducts} from '../../Types/products';
 import {IOrdersContext, IPropsOrdersContext} from '../../Types/context';
+import {generate_random_id, update_status} from '../../utils/helper';
 
 export const OrdersContext = createContext<Partial<IOrdersContext>>({});
 
-const generate_random_id = () => {
-  const randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
-  return randLetter + Date.now();
-};
-
 export const OrdersContextComponent = (props: IPropsOrdersContext) => {
+  const intervalRef: any = useRef(0);
   const [choseProduct, setChoseProduct] = useState<IProducts | null>(null);
   const [orders, setOrders] = useState<IOrder[]>([]);
 
   const updateChoseProduct = (product: IProducts) => {
     setChoseProduct(product);
   };
+
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      const changed_orders: IOrder[] = orders.map(v => {
+        return {...v, status: update_status(v.status)};
+      });
+      setOrders(changed_orders);
+    }, 30000);
+    return () => clearInterval(intervalRef.current);
+  }, [orders]);
 
   const addOrder = (location: string) => {
     if (choseProduct?.title) {

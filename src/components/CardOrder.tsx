@@ -1,21 +1,10 @@
-import {StyleSheet, Text, View} from 'react-native';
-import {IOrder, TColor} from '../Types/products';
 import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+
+import {IOrder} from '../Types/products';
 import {Colors} from '../theme/colors';
 import {shadow} from '../theme/shadow';
-
-const status_color = (color: TColor) => {
-  switch (color) {
-    case 'pending':
-      return Colors.pending;
-    case 'in-process':
-      return Colors.process;
-    case 'delivery':
-      return Colors.delivery;
-    case 'delivered':
-      return Colors.delivered;
-  }
-};
+import {status_color} from '../utils/helper';
 
 const CardOrder: React.FC<IOrder> = props => {
   return (
